@@ -1,5 +1,7 @@
 # PTRACTICA_1
 
+https://github.com/jimenaaineto/PTRACTICA_1.git
+
 La práctica evaluará sobre 10 puntos sin la implementación de swing, aunque se
 valorará de manera positiva la entrega con swing (+2 puntos sobre 10). 
 Para realizar un conjunto de experimentos en un laboratorio de biólogos necesitan una
