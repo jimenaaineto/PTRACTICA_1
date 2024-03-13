@@ -1,16 +1,20 @@
 package practica1.Gestion_Comidas;
 
-    public class Comida {
+import java.time.LocalDate;
+import java.util.Date;
+
+public class Comida {
         
         int cantMaxComida=300;
         int cantInicialComida=1;
-        int diaDecrece=15;
+        LocalDate diaDecrece;
         int cantDiaIncremento=0;
 
-        public Comida(int cantMaxComida, int cantInicialComida, int diaDecrece, int cantDiaIncremento) {
+        public Comida(int cantMaxComida, int cantInicialComida, LocalDate diaDecrece, int cantDiaIncremento) {
             this.cantInicialComida = cantInicialComida;
             this.cantMaxComida = cantMaxComida;
             this.cantDiaIncremento=cantDiaIncremento;
+            this.diaDecrece=diaDecrece;
         }
 
         public int getCantDiaIncremento(){
@@ -28,12 +32,13 @@ package practica1.Gestion_Comidas;
         public void setCantMaxComida(int cantMaxComida) {
             this.cantMaxComida = cantMaxComida;
         }
-
+        public void setCantInicialComida(int cantInicialComida) {
+        this.cantInicialComida = cantInicialComida;
+    }
         public int getCantInicialComida() {
             return cantInicialComida;
         }
 
-        public void setCantInicialComida(int cantInicialComida) {
-            this.cantInicialComida = cantInicialComida;
-        }
+        public void setDiaDecrece(LocalDate diaDecrece){this.diaDecrece = diaDecrece;}
+        public LocalDate getDiaDecrece() {return diaDecrece;}
     }
