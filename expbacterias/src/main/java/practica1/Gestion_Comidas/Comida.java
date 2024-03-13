@@ -1,9 +1,9 @@
- package practica1.Gestion_Comidas;
+package practica1.Gestion_Comidas;
 
     public class Comida {
         
         int cantMaxComida=300;
-        int cantInicialComida=0;
+        int cantInicialComida=1;
         int diaDecrece=15;
         int cantDiaIncremento=0;
 

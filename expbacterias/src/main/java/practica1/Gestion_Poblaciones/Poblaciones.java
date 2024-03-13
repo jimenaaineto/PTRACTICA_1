@@ -1,6 +1,6 @@
 package practica1.Gestion_Poblaciones;
 
-public class Poblaciones {
+public class Poblaciones{
     
     private String nombrePoblacion;
     private int fechaInicio;
@@ -76,4 +76,5 @@ public class Poblaciones {
     public void setDosisComida(float dosisComida) {
         this.dosisComida = dosisComida;
     }
+
 }
