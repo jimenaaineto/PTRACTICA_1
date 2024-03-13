@@ -6,6 +6,7 @@ import java.time.LocalDate;
 import java.util.Date;
 
 import practica1.Gestion_Comidas.Comida;
+import practica1.Gestion_Experimento.Experimento;
 
 public class Poblaciones{
     
@@ -13,16 +14,14 @@ public class Poblaciones{
     LocalDate fechaInicio;
     LocalDate fechaFin;
     int cantidadInicial;
-    float temperatura;
     Luminosidad luminosidad;
-    Comida dosisComida;
+    public Comida dosisComida;
     
-    public Poblaciones(String nombrePoblacion, LocalDate fechaFin, LocalDate fechaInicio, int cantidadInicial, float temperatura, Luminosidad luminosidad, Comida dosisComida ){
+    public Poblaciones(Experimento fechaFinExp, String nombrePoblacion, LocalDate fechaFin, LocalDate fechaInicio, int cantidadInicial,  Luminosidad luminosidad, Comida dosisComida ){
         this.nombrePoblacion=nombrePoblacion;
-        this.fechaFin=fechaFin;
+        this.fechaFin=fechaFinExp.getFechaFinExp();
         this.fechaInicio=fechaInicio;
         this.cantidadInicial=cantidadInicial;
-        this.temperatura=temperatura;
         this.luminosidad=luminosidad;
         this.dosisComida=dosisComida;
         
@@ -60,13 +59,6 @@ public class Poblaciones{
         this.cantidadInicial = cantidadInicial;
     }
 
-    public float getTemperatura() {
-        return temperatura;
-    }
-
-    public void setTemperatura(float temperatura) {
-        this.temperatura = temperatura;
-    }
 
     public  Luminosidad getLuminosidad() {
         return luminosidad;
