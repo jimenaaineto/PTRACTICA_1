@@ -13,12 +13,19 @@ public class EstablecerComidas extends Comida{
 
     public void calcularDosisComida(Poblaciones fechaInicio, Poblaciones fechaFin, int cantMaxComida, LocalDate diaDecrece, int cantInicialComida) {
         LocalDate p;
-        for(p=fechaInicio.getFechaInicio();p<diaDecrece;p++){
-            cantInicialComida=++;
-
+        for(p=fechaInicio.getFechaInicio();p.isBefore(fechaFin.getFechaFin());p=p.plusDays(1)){
+            cantInicialComida++;
+            if (p.isAfter(diaDecrece)){
+                cantInicialComida--;
+            }else{
+                continue;   
+            }
+            if(cantInicialComida==cantMaxComida){
+                System.out.println("Error");
+            }else{
+                continue;
+            }
         }
-
-
     }
 }
 

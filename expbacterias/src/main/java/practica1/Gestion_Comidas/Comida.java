@@ -8,7 +8,7 @@ public class Comida {
         int cantMaxComida=300;
         int cantInicialComida=1;
         LocalDate diaDecrece;
-        int cantDiaIncremento=0;
+        int cantDiaIncremento=0;//para que me sirve????????????
 
         public Comida(int cantMaxComida, int cantInicialComida, LocalDate diaDecrece, int cantDiaIncremento) {
             this.cantInicialComida = cantInicialComida;

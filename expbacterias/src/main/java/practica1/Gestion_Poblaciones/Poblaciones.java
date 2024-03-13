@@ -5,17 +5,19 @@ import sun.util.calendar.BaseCalendar;
 import java.time.LocalDate;
 import java.util.Date;
 
+import practica1.Gestion_Comidas.Comida;
+
 public class Poblaciones{
     
-    private String nombrePoblacion;
+    String nombrePoblacion;
     LocalDate fechaInicio;
     LocalDate fechaFin;
-    private int cantidadInicial;
-    private float temperatura;
-    private Luminosidad luminosidad;
-    private float/*AQUI VA A TENER QUE IR COMIDA */ dosisComida;
+    int cantidadInicial;
+    float temperatura;
+    Luminosidad luminosidad;
+    Comida dosisComida;
     
-    public Poblaciones(String nombrePoblacion, LocalDate fechaFin, LocalDate fechaInicio, int cantidadInicial, float temperatura, Luminosidad luminosidad, float dosisComida ){
+    public Poblaciones(String nombrePoblacion, LocalDate fechaFin, LocalDate fechaInicio, int cantidadInicial, float temperatura, Luminosidad luminosidad, Comida dosisComida ){
         this.nombrePoblacion=nombrePoblacion;
         this.fechaFin=fechaFin;
         this.fechaInicio=fechaInicio;
@@ -74,11 +76,11 @@ public class Poblaciones{
         this.luminosidad = luminosidad;
     }
 
-    public float getDosisComida() {
+    public Comida getDosisComida() {
         return dosisComida;
     }
 
-    public void setDosisComida(float dosisComida) {
+    public void setDosisComida(Comida dosisComida) {
         this.dosisComida = dosisComida;
     }
 
