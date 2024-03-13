@@ -3,7 +3,7 @@ package practica1.Gestion_Poblaciones;
 public class Poblaciones{
     
     private String nombrePoblacion;
-    private int fechaInicio;
+    public int fechaInicio;
     private int fechaFin;
     private int cantidadInicial;
     private float temperatura;
