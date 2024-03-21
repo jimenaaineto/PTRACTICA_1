@@ -21,7 +21,7 @@ public class Main {
                 "5.Borrar una población de bacterias del experimento actual\n" +
                 "6.Ver información detallada de una población de bacterias del experimento actual\n" +
                 "7.Guardar (se supone que para usar esta opción previamente hemos abierto un archivo)\n" +
-                "8.Guardar como" );
+                "8.Guardar como:" );
         int opcion=leer.nextInt();
         return opcion;
     }
