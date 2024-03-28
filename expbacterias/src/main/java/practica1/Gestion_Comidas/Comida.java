@@ -1,5 +1,7 @@
 package practica1.Gestion_Comidas;
 
+import practica1.Gestion_Experimento.Experimento;
+
 import java.time.LocalDate;
 import java.util.Date;
 
@@ -17,6 +19,12 @@ public class Comida {
             this.diaDecrece=diaDecrece;
         }
 
+        public Comida (){
+            this.cantInicialComida=0;
+            this.cantMaxComida = 0;
+            this.cantDiaIncremento=0;
+            this.diaDecrece= LocalDate.ofEpochDay(0);
+        }
         public int getCantDiaIncremento(){
             return cantDiaIncremento;
         }
@@ -41,4 +49,29 @@ public class Comida {
 
         public void setDiaDecrece(LocalDate diaDecrece){this.diaDecrece = diaDecrece;}
         public LocalDate getDiaDecrece() {return diaDecrece;}
+
+    @Override
+    public String toString() {
+        return "\nCOMIDA:" +
+                "\nLa cantidad inicial de comida es: " + cantInicialComida;
     }
+
+    public void calcularDosisComida(Experimento fechaInicioExp, Experimento fechaFinExp, int cantMaxComida, LocalDate diaDecrece, int cantInicialComida) {
+        LocalDate p;
+
+        for(p=fechaInicioExp.getFechaInicioExp();p.isBefore(fechaFinExp.getFechaFinExp());p=p.plusDays(1)){
+            cantInicialComida++;
+            if(cantInicialComida==cantMaxComida){
+                System.out.println("Error");
+            }else{
+                continue;
+            }
+            if (p.isAfter(diaDecrece)){
+                cantInicialComida--;
+            }else{
+                continue;
+            }
+
+        }
+    }
+}

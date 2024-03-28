@@ -15,7 +15,8 @@ public class Poblaciones{
     LocalDate fechaFin;
     int cantidadInicial;
     Luminosidad luminosidad;
-    public Comida dosisComida;
+    Comida dosisComida;
+
     
     public Poblaciones(Experimento fechaFinExp, String nombrePoblacion, LocalDate fechaFin, LocalDate fechaInicio, int cantidadInicial,  Luminosidad luminosidad, Comida dosisComida ){
         this.nombrePoblacion=nombrePoblacion;
