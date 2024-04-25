@@ -19,12 +19,6 @@ public class Comida {
             this.diaDecrece=diaDecrece;
         }
 
-        public Comida (){
-            this.cantInicialComida=0;
-            this.cantMaxComida = 0;
-            this.cantDiaIncremento=0;
-            this.diaDecrece= LocalDate.ofEpochDay(0);
-        }
         public int getCantDiaIncremento(){
             return cantDiaIncremento;
         }
